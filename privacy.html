@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WakeBait Privacy Policy</title><style>body{font-family:-apple-system,system-ui,sans-serif;max-width:680px;margin:48px auto;padding:0 20px;line-height:1.55;color:#111}h1{font-size:2rem;margin-bottom:.25rem}h2{margin-top:2rem}h3{margin-top:1.5rem}a{color:#0a58ff}.muted{color:#666;font-size:.9rem}table{border-collapse:collapse;width:100%;font-size:.9rem;display:block;overflow-x:auto}th,td{border:1px solid #ddd;padding:8px;text-align:left;vertical-align:top}th{background:#f5f5f5}</style></head><body>
 <h1>Privacy Policy</h1>
-<p class="muted">WakeBait for iOS · Last updated 28 September 2026</p>
+<p class="muted">WakeBait for iOS · Last updated 29 September 2026</p>
 <p>WakeBait is an alarm app that wakes you up with your own memes. This policy explains what information WakeBait uses, where it goes, and what you can do about it. We've kept it short and plain.</p>
 
 <h2>The short version</h2>
@@ -9,6 +9,7 @@
 <li>WakeBait doesn't have accounts. You don't sign in, and we don't collect your name or email.</li>
 <li>No ads. No tracking you across other apps or websites. We don't sell your data.</li>
 <li>Apple sells the subscription and takes the payment. A service called RevenueCat checks your subscription for us. It gets a random ID for your copy of WakeBait, not your name or email.</li>
+<li>Each time you open it, WakeBait fetches its settings and sound list from our server, run by a service called Supabase. That request doesn't say who you are.</li>
 </ul>
 
 <h2>Who we are</h2>
@@ -43,6 +44,10 @@
 </ul>
 <p>Because WakeBait has no accounts, your RevenueCat ID isn't connected to your name or email.</p>
 <p>"Manage subscription" in the app opens Apple's own subscription page. WakeBait sends nothing to us or to RevenueCat when you tap it.</p>
+
+<h3>App settings and sounds</h3>
+<p>Each time you open WakeBait, it asks our server for the app's current settings and the list of sounds it offers, and downloads sound and picture files when it needs them. The server is run for us by Supabase.</p>
+<p>The request carries the app's build number. Like any request over the internet, it also carries your IP address and basic details about your device and iOS version. It doesn't include your name, an ID for you, or anything about your alarms, sounds or wake log. We don't use it to identify you. Supabase keeps short-lived request logs, as any web server does.</p>
 
 <h3>Things that stay on your phone</h3>
 <p>Everything in this section is stored only on your iPhone. It's never sent to us or to the services we use. Backups are covered below.</p>
@@ -92,16 +97,18 @@
 <tr><th>Service</th><th>What it does for WakeBait</th><th>What it gets</th><th>Privacy policy</th></tr>
 <tr><td>Apple</td><td>App Store payments and subscriptions, iCloud Backup</td><td>Set out in Apple's policy</td><td><a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></td></tr>
 <tr><td>RevenueCat</td><td>Checks and manages subscriptions</td><td>Random app ID, purchase details, device and app details, country, IP address</td><td><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td></tr>
+<tr><td>Supabase</td><td>Serves the app's settings, sound list and sound files</td><td>IP address, basic device details, the app's build number</td><td><a href="https://supabase.com/privacy">supabase.com/privacy</a></td></tr>
 </table>
-<p>RevenueCat handles your information on our behalf, only to provide its service to us. It's bound to protect it at least as well as this policy does. We only share information to make WakeBait work.</p>
+<p>RevenueCat and Supabase handle your information on our behalf, only to provide their services to us. It's bound to protect it at least as well as this policy does. We only share information to make WakeBait work.</p>
 
 <h2>Where your information is stored</h2>
-<p>We're based in Australia. RevenueCat stores information in the United States (on Amazon Web Services), and Apple stores information as set out in Apple's policy. This means your information may be stored outside your country. RevenueCat protects it under its agreement with us.</p>
+<p>We're based in Australia. RevenueCat stores information in the United States (on Amazon Web Services). Supabase runs our server in the United States (also on Amazon Web Services). Apple stores information as set out in Apple's policy. This means your information may be stored outside your country. RevenueCat and Supabase protect it under their agreements with us.</p>
 
 <h2>How long we keep it</h2>
 <ul>
 <li><strong>On your phone:</strong> until you delete it. You can delete sounds and alarms any time. Deleting the app removes the rest, including your wake log. There's no separate button to clear the wake log yet.</li>
 <li><strong>Subscription records at RevenueCat:</strong> for as long as we use RevenueCat to run WakeBait's subscription, or sooner if you ask us to delete them. Apple keeps its own record of your purchase.</li>
+<li><strong>Request logs at Supabase:</strong> a short time, as part of Supabase's standard logging.</li>
 <li><strong>Support emails:</strong> until your question is sorted, unless you ask us to keep them.</li>
 <li><strong>Backups:</strong> Apple keeps these according to your backup settings.</li>
 </ul>
@@ -130,13 +137,14 @@
 <ul>
 <li><strong>Your subscription:</strong> we need this information to give you the subscription you signed up for.</li>
 <li><strong>Subscription numbers in RevenueCat's dashboard:</strong> our legitimate interest in understanding how the subscription is doing. We only look at totals.</li>
+<li><strong>App settings and sounds from Supabase:</strong> our legitimate interest in running the app.</li>
 <li><strong>Support emails:</strong> our legitimate interest in answering you.</li>
 </ul>
 
 <h2>Keeping it safe</h2>
 <ul>
 <li>Most of your information never leaves your phone.</li>
-<li>WakeBait talks to RevenueCat over encrypted connections (HTTPS).</li>
+<li>WakeBait talks to RevenueCat and Supabase over encrypted connections (HTTPS).</li>
 <li>We collect as little as we can.</li>
 </ul>
 <p>No system is perfectly secure. If a data breach is likely to cause you serious harm, we'll tell you, and the regulator, as the law requires.</p>
